@@ -1,13 +1,118 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body{
+    background-color: #000000;
+}
+.Heading1{
+    display: flex;
+    justify-content: center;
+    font-family: 'VT323', monospace;
+    font-size: 50px;
+    color: aliceblue;
+}
+.SelectOptions{
+    display: flex;
+    justify-content: center;
+}
+.SelectJobList{
+    height:50px;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'VT323', monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flip-card {
+  font-family: cursive;
+  border: 5px solid rgb(241, 241, 241);
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  font-family: 'VT323', monospace;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+
+  text-align: center;
+  background-color: #FF4848;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.flip-card-back {
+  background-color: #699ec2;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.DisplayJobsGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: center;
+  padding: 10px;
+  
+}
+@media (min-width: 600px) {
+  .DisplayJobsGrid { grid-template-columns: repeat(5, 1fr); }
+}
+.btnTitle{
+  background-color: rgb(71, 146, 243);
+}
+.btncompany{
+  background-color: rgb(170, 197, 79);
+}
+.btnLocation{
+  background-color: #FFBD9B;
+}
+.btnjobs_type{
+  background-color: pink;
+}
+.Apply{
+  height: 50px;
+  width: 100px;
+  background-color: #FF67E7
+}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+.AllIcons{
+  height: 50px;
+}
+.Footer{
+  display: flex;
+  justify-content: center;
 }

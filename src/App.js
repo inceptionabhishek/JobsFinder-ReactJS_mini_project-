@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./index.css";
+import GetJobs from "./GetJobs";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <a
+        
+        href="https://url.to-your.repo"
+        data-ribbon="Fork me on GitHub"
+        title="Fork me on GitHub"
+      >
+        Fork me on GitHub
+      </a>
+
+      <div className="Heading1">
+        <h1> Jobs finder✍ </h1>
+      </div>
+      <GetJobs />
+      <Footer />
+      
     </div>
   );
 }
